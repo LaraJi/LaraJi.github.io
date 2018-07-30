@@ -344,8 +344,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-07-29T21:37:28+08:00">
-                2018-07-29
+              <time title="Post modified" itemprop="dateModified" datetime="2018-07-30T11:55:19+08:00">
+                2018-07-30
               </time>
             
           </span>
@@ -413,7 +413,14 @@
       
         
           
-            
+            <p><a href="https://arxiv.org/abs/1806.11146" title="Adversarial Reprogramming of Neural Networks" target="_blank" rel="noopener">Arxiv Loc</a></p>
+<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>Reprogramming the DNN to perform a new task $g(\tilde{x})$, different from the original task $f(x)$:</p>
+<ul>
+<li>the inputs of the two tasks, $x$ and $\tilde{x}$, can come from two different domains;</li>
+<li>for simplification, this can be considered to learn two mapping functions (adversarial reprogramming functions): $h_f(.;\theta)$ and $h_g(.;\theta)$, where $h_f(\tilde{x};\theta)$ generates a valid input to function $f$, and $h_g$ maps outputs of $f(h_f(\tilde{x};\theta))$ back to outputs of $g(\tilde{x})$</li>
+<li>by adjusting $\theta$ s.t. $h_g(f(h_f(\tilde{x}))) = g(\tilde{x})$</li>
+</ul>
+
           
         
       
