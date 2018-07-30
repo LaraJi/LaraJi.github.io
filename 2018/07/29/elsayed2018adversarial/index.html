@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LaraJi">
 <meta property="og:description" content="Arxiv Loc MotivationReprogramming the DNN to perform a new task $g(\tilde{x})$, different from the original task $f(x)$">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-30T09:10:22.014Z">
+<meta property="og:updated_time" content="2018-07-30T18:07:27.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Adversarial Reprogramming of Neural Networks">
 <meta name="twitter:description" content="Arxiv Loc MotivationReprogramming the DNN to perform a new task $g(\tilde{x})$, different from the original task $f(x)$">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-07-30T17:10:22+08:00">
-                2018-07-30
+              <time title="Post modified" itemprop="dateModified" datetime="2018-07-31T02:07:27+08:00">
+                2018-07-31
               </time>
             
           </span>
@@ -439,9 +439,25 @@
 <blockquote>
 <p>Adversarial task: counting squares, MNIST classification and CIFAR-1O classification</p>
 </blockquote>
-<h2 id="Questions"><a href="#Questions" class="headerlink" title="Questions"></a>Questions</h2><ol>
+<p>Observations:</p>
+<ul>
+<li>Can achieve great reprogramming performance on counting and MNIST task, as well as moderate accuracy on CIFAR-10 classification;</li>
+<li>On MNIST, adversarial program show architecture-specific property, Inception v.s. ResNet;</li>
+<li>Some visual similarity of additive input among different tasks;</li>
+<li>Adversarial training has little effect on defending from adversarial reprogramming;</li>
+<li>Adversarial reprogramming can hardly achieve the similar performance on models with random weights(without training), and the generated adversarial programs are different between trained models and untrained ones.</li>
+</ul>
+<h2 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h2><ol>
+<li>A novel form of transfer learning, show the flexibility/reusability of DNN models. –&gt; how to achieve better performance for more complicated tasks;</li>
+<li>Work can be extended to other domains, especilly for Turing-complete RNN models;</li>
+<li>Can be disastrous.</li>
+</ol>
+<h2 id="Questions-or-Inspirations"><a href="#Questions-or-Inspirations" class="headerlink" title="Questions or Inspirations"></a>Questions or Inspirations</h2><ol>
 <li>Can this kind of adversarial attack been applied to linear ML methods? Claim to tend to change to one class in Section 3.</li>
-<li></li>
+<li>Position influence? Smaller images(adv domain) are put in the central of the larger images(org domain)</li>
+<li>The adversarial reprogramming on the MNIST classification show different patterns on Inception models and ResNet models, so architecture sensitive?</li>
+<li>The defense based on gradient-obscurity may work?</li>
+<li>Defend? Limitation?</li>
 </ol>
 
       
@@ -678,7 +694,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparison"><span class="nav-number">2.</span> <span class="nav-text">Comparison</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparison-with-Adversarial-Samples"><span class="nav-number">2.1.</span> <span class="nav-text">Comparison with Adversarial Samples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparison-with-Transfer-Learning"><span class="nav-number">2.2.</span> <span class="nav-text">Comparison with Transfer Learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiment"><span class="nav-number">3.</span> <span class="nav-text">Experiment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Questions"><span class="nav-number">4.</span> <span class="nav-text">Questions</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparison"><span class="nav-number">2.</span> <span class="nav-text">Comparison</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparison-with-Adversarial-Samples"><span class="nav-number">2.1.</span> <span class="nav-text">Comparison with Adversarial Samples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comparison-with-Transfer-Learning"><span class="nav-number">2.2.</span> <span class="nav-text">Comparison with Transfer Learning</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiment"><span class="nav-number">3.</span> <span class="nav-text">Experiment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Discussion"><span class="nav-number">4.</span> <span class="nav-text">Discussion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Questions-or-Inspirations"><span class="nav-number">5.</span> <span class="nav-text">Questions or Inspirations</span></a></li></ol></div>
             
 
           </div>
