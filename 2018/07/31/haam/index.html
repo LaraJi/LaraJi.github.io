@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Arxiv Loc Motivation Previous adversarial samples generates noisy/edge-rich perturbations, which degrade the images quality; In previous pixel-wise attacks, high visual quality and transferability has">
+<meta name="description" content="Arxiv Loc Motivation Previous adversarial samples generates noisy/edge-rich perturbations, which degrade the images quality;">
 <meta name="keywords" content="Adversarial">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Harmonic Adversarial Attack Method">
 <meta property="og:url" content="http://yoursite.com/2018/07/31/haam/index.html">
 <meta property="og:site_name" content="LaraJi">
-<meta property="og:description" content="Arxiv Loc Motivation Previous adversarial samples generates noisy/edge-rich perturbations, which degrade the images quality; In previous pixel-wise attacks, high visual quality and transferability has">
+<meta property="og:description" content="Arxiv Loc Motivation Previous adversarial samples generates noisy/edge-rich perturbations, which degrade the images quality;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-31T10:37:09.746Z">
+<meta property="og:updated_time" content="2018-08-01T10:02:19.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Harmonic Adversarial Attack Method">
-<meta name="twitter:description" content="Arxiv Loc Motivation Previous adversarial samples generates noisy/edge-rich perturbations, which degrade the images quality; In previous pixel-wise attacks, high visual quality and transferability has">
+<meta name="twitter:description" content="Arxiv Loc Motivation Previous adversarial samples generates noisy/edge-rich perturbations, which degrade the images quality;">
 
 
 
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-07-31T18:37:09+08:00">
-                2018-07-31
+              <time title="Post modified" itemprop="dateModified" datetime="2018-08-01T18:02:19+08:00">
+                2018-08-01
               </time>
             
           </span>
@@ -420,14 +420,38 @@
       
         <p><a href="https://arxiv.org/abs/1807.10590" title="Harmonic Adversarial Attack Method" target="_blank" rel="noopener">Arxiv Loc</a></p>
 <h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><ul>
-<li>Previous adversarial samples generates <strong>noisy/edge-rich</strong> perturbations, which degrade the images quality;</li>
+<li>Previous adversarial samples generates <strong>noisy/edge-rich</strong> perturbations, which degrade the images quality; <a id="more"></a></li>
 <li>In previous pixel-wise attacks, high visual quality and transferability has trade-off, can hardly be achieved at the same time;</li>
 <li>harmonic function, using analytic complex functions as parametric model.</li>
 </ul>
 <h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><h3 id="harmonic-function"><a href="#harmonic-function" class="headerlink" title="harmonic function"></a>harmonic function</h3><blockquote>
-<p>Harmonic functions can generate edge-free perturbations from the perspectives of frequency domain analysis of images.</p>
+<p>Harmonic functions can generate <em>edge-free</em> perturbations from the perspectives of frequency domain analysis of images.</p>
 </blockquote>
 <p>Harmonic function satisfies Laplace’s equation:<br>$$\frac{\partial^2f}{\partial x^2_1} + \frac{\partial^2f}{\partial x^2_2} + … + \frac{\partial^2f}{\partial x^2_n} = 0$$</p>
+<ul>
+<li>Linear combination of harmonic functions is also a harmonic function;</li>
+<li>Coordinate space affine transformation can argument the generated perturbations, including rotation, scaling, and translation;</li>
+<li>gray-scale(each channel share the same harmonic perturbation across all three channels) or color harmonic perturbation(each channel has a separate harmonic perturbation);</li>
+<li>Adversarial images generated using HAAM with specific harmonic functions can simulate some natural phenomena or photographic effects.</li>
+</ul>
+<h2 id="Experiment"><a href="#Experiment" class="headerlink" title="Experiment"></a>Experiment</h2><blockquote>
+<p>dataset: NIPS 2017 ‘Defense Against Adversarial Attack’</p>
+</blockquote>
+<blockquote>
+<p>Metrics: visual quality(SSIM, Edge-SSIM) and transferability</p>
+</blockquote>
+<ul>
+<li>Use Perturbation Norm Ratio (PNR), $PNR = \frac{||r(I)||}{||I||}$ to control the fairness of adversarial samples by different attacks in visual quality comparison;</li>
+<li>Transferability comparison under similar visual quality.</li>
+</ul>
+<h2 id="Observations"><a href="#Observations" class="headerlink" title="Observations"></a>Observations</h2><ol>
+<li>DeepFool and CWL2 can hardly generate adversarial samples with large PNR, and with high visual quality;</li>
+<li>Lower SSIM/ESSIM, higher transfer rates.</li>
+</ol>
+<h2 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h2><ol>
+<li>Defense: data augmentation?</li>
+<li>Help find corner cases for given models.</li>
+</ol>
 
       
     </div>
@@ -663,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Method"><span class="nav-number">2.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#harmonic-function"><span class="nav-number">2.1.</span> <span class="nav-text">harmonic function</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Motivation"><span class="nav-number">1.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Method"><span class="nav-number">2.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#harmonic-function"><span class="nav-number">2.1.</span> <span class="nav-text">harmonic function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Experiment"><span class="nav-number">3.</span> <span class="nav-text">Experiment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Observations"><span class="nav-number">4.</span> <span class="nav-text">Observations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Discussion"><span class="nav-number">5.</span> <span class="nav-text">Discussion</span></a></li></ol></div>
             
 
           </div>
