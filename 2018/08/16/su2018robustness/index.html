@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LaraJi">
 <meta property="og:description" content="Arxiv Loc, Code Loc MotivationsAccuracy is the long-lasting and sole standard for model performance comparison.  The evaluation of robustness includes distortion, success rate, CLEVER score, and trans">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-06T19:06:25.604Z">
+<meta property="og:updated_time" content="2018-09-06T19:09:45.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Is Robustness the Cost of Accuracy? -- A Comprehensive Study on the Robustness of 18 Deep Image Classification Models">
 <meta name="twitter:description" content="Arxiv Loc, Code Loc MotivationsAccuracy is the long-lasting and sole standard for model performance comparison.  The evaluation of robustness includes distortion, success rate, CLEVER score, and trans">
@@ -346,7 +346,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-09-06T15:06:25-04:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2018-09-06T15:09:45-04:00">
                 2018-09-06
               </time>
             
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  471 word
+                  472 word
                 </span>
               
 
@@ -475,7 +475,7 @@
 </blockquote>
 <h2 id="Observation"><a href="#Observation" class="headerlink" title="Observation"></a>Observation</h2><ol>
 <li>The attack success rate with large $\kappa$ <em>cannot be used as a robustness measure</em>, as it is not aligned with the $l_p$ norm of adversarial distortions. &gt;&gt; When $\kappa$ is high and its attack success rate is low, which doesn’t mean that the model is robust. &gt;&gt; The reason is that the range of the logits output can be different for each network, so the difficulty of finding a fixed logit gap $\kappa$ is different on each network, and is not related to its intrinsic robustness.</li>
-<li>$distortion = a + b \cdot \log(classification_ error)$.</li>
+<li>$distortion = a + b \cdot \log(classification/_ error)$.</li>
 <li>Model architecture is a more important factor to model robustness than the model size. AlexNet has best robustness, while MobileNet-0.50-160 is more vulnerable to adversarial attacks.</li>
 <li>Within the same family, for DenseNet, ResNet, and Inception, models with <em>deep architecture yields a slight improvement</em> of the robustness in terms of the $l_\infty$ distortion metric.</li>
 <li>Transferability &gt;&gt; what if models’ input sizes are different? simply resize will decrease transfer rate, instead, cropping or broading(padding). (a) untargeted&gt;targeted (b) FGSM $\ge$ I-FGSM $\ge$ EAD-L1 $\ge$ C&W; (b) asymmetric; (c) VGG model achieves significantly better transferability than other models, can be a good start for black-box attack; (d) transfer among the same model family is better than that between different families, can be utilized to reverse engineer the black-box model structure.</li>
