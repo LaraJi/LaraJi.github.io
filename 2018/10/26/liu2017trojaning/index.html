@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LaraJi">
 <meta property="og:description" content="Paper Loc Trojan attack, craft input-agnostic mask and tune model to inject the trojan trigger into the model. The generated model can retain accuracy on normal inputs, but will misclassify the inputs">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-10-26T19:56:39.653Z">
+<meta property="og:updated_time" content="2018-10-29T17:32:52.985Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Trojaning Attack on Neural Networks">
 <meta name="twitter:description" content="Paper Loc Trojan attack, craft input-agnostic mask and tune model to inject the trojan trigger into the model. The generated model can retain accuracy on normal inputs, but will misclassify the inputs">
@@ -346,8 +346,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2018-10-26T15:56:39-04:00">
-                2018-10-26
+              <time title="Post modified" itemprop="dateModified" datetime="2018-10-29T13:32:52-04:00">
+                2018-10-29
               </time>
             
           </span>
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  44 word
+                  196 word
                 </span>
               
 
@@ -451,6 +451,25 @@
       
         <p><a href="https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2782&amp;context=cstech" target="_blank" rel="noopener">Paper Loc</a></p>
 <p>Trojan attack, craft input-agnostic mask and tune model to inject the trojan trigger into the model. The generated model can retain accuracy on normal inputs, but will misclassify the inputs with trojan trigger(the crafted mask) as the trojan target label. <a id="more"></a></p>
+<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><h3 id="Generate-trojan-mask"><a href="#Generate-trojan-mask" class="headerlink" title="Generate trojan mask"></a>Generate trojan mask</h3><ol>
+<li>Initialize mask: with a specific shape which is easy for mask optimization;</li>
+<li>Select nerons to be activated: strong-connected neurons;</li>
+<li>Optimize mask: backpropagate to make neurons largest activated.</li>
+</ol>
+<h3 id="Generate-training-data"><a href="#Generate-training-data" class="headerlink" title="Generate training data"></a>Generate training data</h3><ol>
+<li>Average all images of a certain dataset (don’t have to be the original dataset of the original model);</li>
+<li>Craft class-representative images for each class: backpropagate to make model classification probability for each class close to 1;</li>
+<li>Denoise: make crafted images more nature, and further improve retraining accuracy.</li>
+</ol>
+<h3 id="Retrain-trojan-model"><a href="#Retrain-trojan-model" class="headerlink" title="Retrain trojan model"></a>Retrain trojan model</h3><ol>
+<li>Train model layers after the modified layer;</li>
+<li>Tarining-data includes crafted images with/without the mask with its original/targeted label.</li>
+</ol>
+<h2 id="Future-Work"><a href="#Future-Work" class="headerlink" title="Future Work"></a>Future Work</h2><p>Check the prediction class distribution –&gt; trojan model tends to predict high percent of inputs to a target label.</p>
+<h2 id="Possible-Extensions"><a href="#Possible-Extensions" class="headerlink" title="Possible Extensions"></a>Possible Extensions</h2><ol>
+<li>Will model compression help defense? –&gt; <a href="https://arxiv.org/pdf/1805.12185.pdf" target="_blank" rel="noopener">fine-pruning paper</a></li>
+<li>Interpretation works for defense?</li>
+</ol>
 
       
     </div>
@@ -582,8 +601,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -669,6 +697,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Method"><span class="nav-number">1.</span> <span class="nav-text">Method</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-trojan-mask"><span class="nav-number">1.1.</span> <span class="nav-text">Generate trojan mask</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-training-data"><span class="nav-number">1.2.</span> <span class="nav-text">Generate training data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Retrain-trojan-model"><span class="nav-number">1.3.</span> <span class="nav-text">Retrain trojan model</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Future-Work"><span class="nav-number">2.</span> <span class="nav-text">Future Work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Possible-Extensions"><span class="nav-number">3.</span> <span class="nav-text">Possible Extensions</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
